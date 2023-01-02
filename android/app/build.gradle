@@ -1,7 +1,33 @@
-apply plugin: "com.android.application"
-
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
+
+apply plugin: "com.android.application"
+
+project.ext.vectoricons = [
+    iconFontNames: [ 
+        'EvilIcons.ttf',
+        'FontAwesome.ttf',
+        'FontAwesome5.ttf',
+        'FontAwesome5Brands.ttf',
+        'Fontisto.ttf',
+        'Foundation.ttf',
+        'Ionicons.ttf',
+        'MaterialCommunityIcons.ttf',
+        'MaterialIcons.ttf',
+        'Octicons.ttf',
+        'SimpleLineIcons.ttf',
+        'Zocial.ttf',
+        'Feather.ttf',
+        'AntDesign.ttf',
+        'Entypo.ttf'
+
+
+    ] // Name of the font files you want to copy
+]
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
